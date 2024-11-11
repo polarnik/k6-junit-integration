@@ -1,13 +1,12 @@
 ---
 marp: true
-title: Ускоряем Allure.TestOps
-description: Allure.TestOps, Kubernetes, Spring, HikaryCP, PostgreSQL, Grafana, VictoriaMetrics
+title: Как количество тестов производительности переходит в качество
+description: Allure.TestOps, JUnit, k6, Grafana
 theme: codetalks
 template: bespoke
 paginate: false
 _paginate: false
 unknown-size: true
-
 
 ---
 
