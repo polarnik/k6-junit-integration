@@ -107,4 +107,21 @@ em a {
 
 code {
     font-size: 150%;
+    font-family: 'JetBrains Mono';
+}
+
+pre {
+    margin: 0% !important;
+}
+
+section > p > code
+{
+    word-wrap: anywhere;
+}
+section pre, section > code, section > pre, section > p {
+    margin: 30px;
+}
+
+pre code.language-java {
+    opacity: 0.4;
 }

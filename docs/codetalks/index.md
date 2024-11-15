@@ -449,7 +449,7 @@ unknown-size: true
 
 # Это __подход__ 
 # для _разных_ TMS: 
-# Allure, Qase, TestRail, TestIT, самодельных ... 
+## Allure, Qase, TestRail, TestIT, самодельных ... 
 
 ---
 
@@ -457,7 +457,7 @@ unknown-size: true
 
 # Это __подход__
 # для _разных_ TMS:
-# __Allure__, Qase, TestRail, TestIT, самодельных ...
+## __Allure__, Qase, TestRail, TestIT, самодельных ...
 
 
 ---
@@ -547,7 +547,7 @@ unknown-size: true
 
 ---
 
-## __[allurereport.org/docs/junit5/#organize-tests](https://allurereport.org/docs/junit5/#organize-tests)__
+### __[allurereport.org/docs/junit5/#organize-tests](https://allurereport.org/docs/junit5/#organize-tests)__
 
 ![bg w:100% opacity:100%](img/allure.behavior-based-hierarchy.runtime.api.png)
 
@@ -562,7 +562,7 @@ unknown-size: true
 
 ---
 
-## __[allurereport.org/docs/junit5/#organize-tests](https://allurereport.org/docs/junit5/#organize-tests)__
+### __[allurereport.org/docs/junit5/#organize-tests](https://allurereport.org/docs/junit5/#organize-tests)__
 
 # Behavior: Epic / Feature / Story
 
@@ -572,7 +572,7 @@ unknown-size: true
 
 ---
 
-## __[allurereport.org/docs/junit5/#organize-tests](https://allurereport.org/docs/junit5/#organize-tests)__
+### __[allurereport.org/docs/junit5/#organize-tests](https://allurereport.org/docs/junit5/#organize-tests)__
 
 # Behavior: Epic / Feature / Story
 
@@ -592,7 +592,7 @@ Allure.story("Authentication");
 
 ---
 
-## __[allurereport.org/docs/gettingstarted-navigation](https://allurereport.org/docs/gettingstarted-navigation/#behavior-based-hierarchy)__
+### __[allurereport.org/docs/gettingstarted-navigation](https://allurereport.org/docs/gettingstarted-navigation/#behavior-based-hierarchy)__
 
 ![bg w:100% opacity:50%](img/allure.behavior-based-hierarchy.png)
 
@@ -604,7 +604,6 @@ Allure.story("Authentication");
 ### __[docs.qameta.io/allure-testops/briefly/test-cases/labels/](https://docs.qameta.io/allure-testops/briefly/test-cases/labels/#list-of-standard-labels-used-in-allure-framework)__
 
 * parentSuite, suite, subSuite
-
 * testClass, testMethod
 * _epic_, _feature_, _story_
 * owner, lead
@@ -619,7 +618,6 @@ Allure.story("Authentication");
 ### __[docs.qameta.io/allure-testops/briefly/test-cases/labels/](https://docs.qameta.io/allure-testops/briefly/test-cases/labels/#list-of-standard-labels-used-in-allure-framework)__
 
 - parentSuite, suite, subSuite
-
 - testClass, testMethod
 - _epic_, _feature_, _story_
 - owner, lead
@@ -640,7 +638,7 @@ Allure.story("Authentication");
 # _service_ (сервис)
 
 ```groovy
-⭐️ Allure.label("service",  "API");                   
+Allure.label("service",  "API");                   
 ```
 
 
@@ -648,9 +646,11 @@ Allure.story("Authentication");
 
 # _endpoint_ (метод сервиса)
 
+```java
+Allure.label("service",  "API");                   
+```
 ```groovy
-   Allure.label("service",  "API");                   
-⭐️ Allure.label("endpoint", "GET /projects");
+Allure.label("endpoint", "GET /projects");         
 ```
 
 
@@ -658,10 +658,12 @@ Allure.story("Authentication");
 
 # _payload_ (параметры)
 
+```java
+Allure.label("service",  "API");                   
+Allure.label("endpoint", "GET /projects");
+```
 ```groovy
-   Allure.label("service",  "API");                   
-   Allure.label("endpoint", "GET /projects");
-⭐️ Allure.label("payload",  "fields=item");
+Allure.label("payload",  "fields=item");           
 ```
 
 
@@ -669,11 +671,13 @@ Allure.story("Authentication");
 
 # _dataset_ (тестовые данные)
 
+```java
+Allure.label("service",  "API");                   
+Allure.label("endpoint", "GET /projects");
+Allure.label("payload",  "fields=item");
+```
 ```groovy
-   Allure.label("service",  "API");                   
-   Allure.label("endpoint", "GET /projects");
-   Allure.label("payload",  "fields=item");
-⭐️ Allure.label("dataset",  "enterprise 10000 users");
+Allure.label("dataset",  "enterprise 10000 users");
 ```
 
 
@@ -681,12 +685,14 @@ Allure.story("Authentication");
 
 # _version_ (версию сервиса)
 
+```java
+Allure.label("service",  "API");                   
+Allure.label("endpoint", "GET /projects");
+Allure.label("payload",  "fields=item");
+Allure.label("dataset",  "enterprise 10000 users");
+```
 ```groovy
-   Allure.label("service",  "API");                   
-   Allure.label("endpoint", "GET /projects");
-   Allure.label("payload",  "fields=item");
-   Allure.label("dataset",  "enterprise 10000 users");
-⭐️ Allure.label("version",  getServerVersion());
+Allure.label("version",  getServerVersion());      
 ```
 
 
@@ -694,13 +700,15 @@ Allure.story("Authentication");
 
 # _environment_ (стенд)
 
+```java
+Allure.label("service",  "API");                   
+Allure.label("endpoint", "GET /projects");
+Allure.label("payload",  "fields=item");
+Allure.label("dataset",  "enterprise 10000 users");
+Allure.label("version",  getServerVersion());
+```
 ```groovy
-   Allure.label("service",  "API");                   
-   Allure.label("endpoint", "GET /projects");
-   Allure.label("payload",  "fields=item");
-   Allure.label("dataset",  "enterprise 10000 users");
-   Allure.label("version",  getServerVersion());
-⭐️ Allure.label("environment",     "production");
+Allure.label("environment",     "production");     
 ```
 
 
@@ -708,45 +716,49 @@ Allure.story("Authentication");
 
 # _server-location_ (размещение)
 
+```java
+Allure.label("service",  "API");                   
+Allure.label("endpoint", "GET /projects");
+Allure.label("payload",  "fields=item");
+Allure.label("dataset",  "enterprise 10000 users");
+Allure.label("version",  getServerVersion());
+Allure.label("environment",     "production");
+```
 ```groovy
-   Allure.label("service",  "API");                   
-   Allure.label("endpoint", "GET /projects");
-   Allure.label("payload",  "fields=item");
-   Allure.label("dataset",  "enterprise 10000 users");
-   Allure.label("version",  getServerVersion());
-   Allure.label("environment",     "production");
-⭐️ Allure.label("server-location", "USA");
+Allure.label("server-location", "USA");            
 ```
 
 ---
 
 # _client-location_ (параметры клиента)
 
-```groovy
-   Allure.label("service",  "API");                   
-   Allure.label("endpoint", "GET /projects");
-   Allure.label("payload",  "fields=item");
-   Allure.label("dataset",  "enterprise 10000 users");
-   Allure.label("version",  getServerVersion());
-   Allure.label("environment",     "production");
-   Allure.label("server-location", "USA");
-⭐️ Allure.label("client-location", "Europe");
+```java
+Allure.label("service",  "API");                   
+Allure.label("endpoint", "GET /projects");
+Allure.label("payload",  "fields=item");
+Allure.label("dataset",  "enterprise 10000 users");
+Allure.label("version",  getServerVersion());
+Allure.label("environment",     "production");
+Allure.label("server-location", "USA");
 ```
-
+```groovy
+Allure.label("client-location", "Europe");         
+```
+ 
 ---
 
 # Задать можно _любые_ метки (__label__)
 
 ```groovy
-   Allure.label("service",  "API");
-   Allure.label("endpoint", "GET /projects");
-   Allure.label("payload",  "fields=item");
-   Allure.label("dataset",  "enterprise 10000 users");
-   Allure.label("version",  getServerVersion());
-   Allure.label("environment",     "production");
-   Allure.label("server-location", "USA");
-   Allure.label("client-location", "Europe");
-⭐️ ...
+Allure.label("service",  "API");
+Allure.label("endpoint", "GET /projects");
+Allure.label("payload",  "fields=item");
+Allure.label("dataset",  "enterprise 10000 users");
+Allure.label("version",  getServerVersion());
+Allure.label("environment",     "production");
+Allure.label("server-location", "USA");
+Allure.label("client-location", "Europe");
+...
 ```
 
 
@@ -1021,7 +1033,6 @@ Allure.label("version",  getServerVersion());
 
 _Некоторые_ инструменты запустить __легко__
 * __JMeter-Java-DSL__
-
 * __Gatling__
 
 
@@ -1030,14 +1041,12 @@ _Некоторые_ инструменты запустить __легко__
 # __JUnit__ написан на _Java_
 
 Некоторые инструменты запустить легко
-* JMeter-Java-DSL
-
-* Gatling
+- JMeter-Java-DSL
+- Gatling
 
 _Любые_ инструменты запустить __возможно__
 
 * В _Java_ есть __[java.testcontainers.org](https://java.testcontainers.org/)__
-
 * Через __Test Containers__ можно запустить _Docker_-контейнеры
 * Внутри _Docker_ можно запустить: __k6__, Taurus, ...
 
