@@ -16,21 +16,47 @@ unknown-size: true
 # Как _количество_ тестов производительности переходит в __качество__
 
 
+---
 
+<!-- _class: main -->
+
+
+# Спустя годы попыток
 
 
 ---
 
-# Ночь ...
 
-# ✨ 🌙 💤
+<!-- _class: main -->
+
+
+# Спустя годы попыток
+
+# отчеты по нагрузке
+
 
 ---
 
+<!-- _class: main -->
 
-# Ночь
 
-# вдруг просыпается нагрузочник со словами: __"Отчет не отправил!"__
+# Спустя годы попыток
+
+# отчеты по нагрузке
+
+# интересны читателям
+
+---
+
+<!-- _class: lead -->
+
+
+# Спустя годы попыток
+
+# _отчеты_ __по нагрузке__
+
+# __интересны__ _читателям_
+
 
 ---
 <!-- _class: main -->
@@ -66,7 +92,9 @@ unknown-size: true
 
 <!-- _class: about -->
 
-# Смирнов Вячеслав
+![w:400px h:400px](img/foto.png)
+
+## Смирнов Вячеслав
 ## Ускоряю _miro.com_
 ### Развиваю __@qa_load__
 
@@ -74,28 +102,29 @@ unknown-size: true
 
 # План
 
-1) В чем _проблема_ тестирования производительности?
+1) Чем сложна нагрузка?
 
 1) Как понять _результат_ теста за секунду?
 1) Как понять __сотню__ _результатов_ тестов за минуту?
-1) Что дает _TMS_ (__Allure__) читателю?
+1) 4️⃣ Что дает Test Management System (_TMS_)?
 1) Что дает _Test Framework_ (__JUnit__) писателю?
-1) Почему _больше_ тестов — лучше?
-1) Какие есть __примеры__?
+1) Почему _больше_ тестов — __лучше__?
 
 ---
 
 
 <!-- _class: lead -->
 
-# 1️⃣ В чем _проблема_ тестирования производительности?
+# 1️⃣ Чем сложна нагрузка?
 
 
 ---
 
 <!-- _class: main -->
 
-# Просто ли __написать тесты__ производительности?
+# Просто ли 
+# __написать__ 
+# нагрузочные тесты?
 
 ---
 
@@ -132,7 +161,9 @@ unknown-size: true
 <!-- _class: main -->
 
 
-# Просто ли _понять отчет_ по производительности?
+# Просто ли 
+# _понять отчет_ 
+# по нагрузке?
 
 ---
 
@@ -153,9 +184,9 @@ unknown-size: true
 <!-- _class: main -->
 
 
-# __Непростые__ тесты 
-# и
-# __непростые__ результаты
+# __Непростые__ 
+# тесты и
+# результаты
 
 ---
 
@@ -163,9 +194,9 @@ unknown-size: true
 <!-- _class: main -->
 
 
-# Непростые тесты
-# и
-# __непростые__ _результаты_
+# __Непростые__
+# тесты и
+# _результаты_
 
 ---
 
@@ -173,35 +204,37 @@ unknown-size: true
 <!-- _class: lead -->
 
 
-# Людям сложно читать
-# __непростые__ _результаты_
-# нагрузочных тестов
+# Людям 
+# _трудно понимать_
+# __результаты нагрузки__
 
 ---
 
 
 <!-- _class: lead -->
 
-# 2️⃣ Как понять _результат_ теста за секунду?
+# 2️⃣ Как понять 
+# _результат_ теста 
+# за секунду?
 
 ---
 
-# Простейший результат __теста__: 
+# Результат _одного_ __теста__: 
 
-# ✅ хорошо
-# 🛑 плохо
+# ✅ OK
+# 🛑 Fail
 
 ---
 
-# Простейший результат __теста__:
+# Результат _одного_ __теста__:
 
-# ✅ хорошо
-# 🛑 плохо
+# ✅ OK
+# 🛑 Fail
 # ⚠️ не получилось проверить
 
 ---
 
-# Результат __набора__ тестов:
+# Результат _набора_ __тестов__:
 
 # ✅ 15
 # ✅ 10 🛑 5
@@ -210,7 +243,7 @@ unknown-size: true
 
 ---
 
-# Результат __набора__ тестов:
+# Результат _набора_ __тестов__:
 
 # ✅ 15 — _все хорошо_ 
 # ✅ 10 🛑 5
@@ -219,7 +252,7 @@ unknown-size: true
 
 ---
 
-# Результат __набора__ тестов:
+# Результат _набора_ __тестов__:
 
 # ✅ 15
 # ✅ 10 🛑 5  — _кое-что сломалось_
@@ -228,7 +261,7 @@ unknown-size: true
 
 ---
 
-# Результат __набора__ тестов:
+# Результат _набора_ __тестов__:
 
 # ✅ 15
 # ✅ 10 🛑 5
@@ -237,7 +270,7 @@ unknown-size: true
 
 ---
 
-# Результат __набора__ тестов:
+# Результат _набора_ __тестов__:
 
 # ✅ 15
 # ✅ 10 🛑 5
@@ -245,11 +278,11 @@ unknown-size: true
 # ⚠️ 15   — _не удалось проверить_
 
 
+
 ---
 
-<!-- _class: main -->
+![bg h:90%](img/report.2.png)
 
-# Простейший результат — это __статус__ ✅ 🛑 и __описание__ теста: сервис, версия, метод
 
 ---
 
@@ -267,80 +300,165 @@ unknown-size: true
 
 <!-- _class: lead -->
 
-# Для быстрого понимания результатов тестов производительности, результат должен стать статусом: _да_ или __нет__
+## В результате важны
+# __статус__: ✅ 🛑
+## и __описание__: сервис, версия, ...
 
 ---
 
 
 <!-- _class: lead -->
 
-# 3️⃣ Как понять __сотню__ _результатов_ тестов за минуту?
+# 3️⃣ Как 
+# сделать _анализ_ 
+# __сотни__ результатов?
+
+---
+
+# Что с сервисами?
+
+
+| Service       | Version 1.2.3 | Version 1.2.4 |
+|:--------------|--------------:|--------------:|
+| API Service   |          ✅250 |         ✅242 🛑8 |
+
+---
+
+# Что с сервисами?
+
+
+| Service         | Version 1.2.3 | Version _1.2.4_ |
+|:----------------|--------------:|----------------:|
+| __API Service__ |          ✅250 |        ✅242 🛑8 |
+
+## В __API Service__ что-то сломалось в версии _1.2.4_
+
+---
+
+# _Кликаем_ по Service __API Service__
+
+
+| Service         | Version 1.2.3 |   Version 1.2.4 |
+|:----------------|--------------:|----------------:|
+| __API Service__ |          ✅250 |        ✅242 🛑8 |
+
+## и переходим в детали
 
 ---
 
 # Что с API?
 
-| API           | Version 1.2.3 | Version 1.2.4 |
-|:--------------|--------------:|--------------:|
-| GET /users    |           ✅80 |           ✅80 |
-| POST /project |           ✅60 |           ✅60 |
-| GET /project  |           ✅60 |       ✅52 🛑8 |
-| GET /account  |           ✅50 |           ✅50 |
+| Endpoint     | Version 1.2.3 | Version 1.2.4 |
+|:-------------|--------------:|--------------:|
+| GET /project |           ✅50 |       ✅42 🛑8 |
+| GET /users   |          ✅100 |          ✅100 |
+| GET /account |          ✅100 |          ✅100 |
 
 ---
 
-# Сбой __GET /project__ для версии _1.2.4_
+# Сбой в __GET /project__
 
-| API              | Version 1.2.3 | Version _1.2.4_ |
+| Endpoint         | Version 1.2.3 |   Version 1.2.4 |
 |:-----------------|--------------:|----------------:|
-| GET /users       |           ✅80 |             ✅80 |
-| POST /project    |           ✅60 |             ✅60 |
-| __GET /project__ |           ✅60 |         ✅52 🛑8 |
-| GET /account     |           ✅50 |             ✅50 |
+| __GET /project__ |           ✅50 |       ✅42 🛑8 |
+| GET /users       |          ✅100 |          ✅100 |
+| GET /account     |          ✅100 |          ✅100 |
+
+
+---
+
+# _Кликаем_ по __GET /project__
+
+| Endpoint          | Version 1.2.3 |   Version 1.2.4 |
+|:------------------|--------------:|----------------:|
+| __GET /project__  |            ✅50 |       ✅42 🛑8 |
+| GET /users        |          ✅100 |          ✅100 |
+| GET /account      |          ✅100 |          ✅100 |
 
 
 ---
 
 # Что не так с __GET /project__?
 
-| API              | Payload             | Version 1.2.3 | Version 1.2.4 |
-|:-----------------|:--------------------|--------------:|--------------:|
-| __GET /project__ | ?fields=id          |           ✅15 |           ✅15 |
-| __GET /project__ | ?fields=name        |           ✅15 |           ✅15 |
-| __GET /project__ | ?fields=items       |           ✅15 |        ✅7 🛑8 |
-| __GET /project__ | ?fields=permissions |           ✅15 |           ✅15 |
+| Endpoint     | Payload             | Version 1.2.3 | Version 1.2.4 |
+|:-------------|:--------------------|--------------:|--------------:|
+| GET /project | ?fields=name        |           ✅10 |        ✅2 🛑8 |
+| GET /project | ?fields=items       |           ✅20 |           ✅20 |
+| GET /project | ?fields=permissions |           ✅20 |           ✅20 |
 
 
 ---
 
-# Поле __items__ замедлилось в _1.2.4_
+# Поле __name__ замедлилось
 
-| API          | Payload             | Version 1.2.3 | Version _1.2.4_ |
-|:-------------|:--------------------|--------------:|----------------:|
-| GET /project | ?fields=id          |           ✅15 |             ✅15 |
-| GET /project | ?fields=name        |           ✅15 |             ✅15 |
-| GET /project | ?fields=__items__   |           ✅15 |          ✅7 🛑8 |
-| GET /project | ?fields=permissions |           ✅15 |             ✅15 |
+| Endpoint     | Payload             | Version 1.2.3 |  Version 1.2.4 |
+|:-------------|:--------------------|--------------:|---------------:|
+| GET /project | ?fields=__name__    |           ✅10 |        ✅2 🛑8 |
+| GET /project | ?fields=items       |           ✅20 |           ✅20 |
+| GET /project | ?fields=permissions |           ✅20 |           ✅20 |
 
+---
+
+# _Кликаем_ по payload __name__ ...
+
+| Endpoint     | Payload             | Version 1.2.3 |  Version 1.2.4 |
+|:-------------|:--------------------|--------------:|---------------:|
+| GET /project | ?fields=__name__    |           ✅10 |        ✅2 🛑8 |
+| GET /project | ?fields=items       |           ✅20 |           ✅20 |
+| GET /project | ?fields=permissions |           ✅20 |           ✅20 |
+
+---
+
+# Проанализировали результаты
+
+* ### Service: _API Service_
+* ### Endpoint: __GET /project__
+* ### Payload: _?fields=name_
+* ### Version: __1.2.4__
+
+---
+
+# Проанализировали результаты
+
+- ### Service: _API Service_
+- ### Endpoint: __GET /project__
+- ### Payload: _?fields=name_
+- ### Version: __1.2.4__
+
+# за несколько кликов
 
 ---
 
 
 <!-- _class: lead -->
 
-# _Аналитический отчет_ или сводная таблица позволяют __быстро__ найти _что_, _где_ и _когда_ сломалось 
+# _Таблицы_ 
+# преобразуют статусы в
+# _аналитический отчет_
 
 ---
 
 <!-- _class: lead -->
 
-# 4️⃣ Что дает _TMS_ (__Allure__) читателю?
+# 4️⃣ Что дает 
+# Test Management System (_TMS_)?
 
 ---
 
 <!-- _class: main -->
 
-# Подход применим к любой _TMS_: Allure TestOps, TestRail, TestIT, Qase, ... или __самописной__
+# Это __подход__ 
+# для _разных_ TMS: 
+# Allure, Qase, TestRail, TestIT, самодельных ... 
+
+---
+
+<!-- _class: main -->
+
+# Это __подход__
+# для _разных_ TMS:
+# __Allure__, Qase, TestRail, TestIT, самодельных ...
+
 
 ---
 
@@ -353,55 +471,60 @@ unknown-size: true
 
 ---
 
-# Нужно сделать вот такой отчет
+# Можно сделать сводный отчет
 
-| API          | Payload             | Version 1.2.3 | Version _1.2.4_ |
-|:-------------|:--------------------|--------------:|----------------:|
-| GET /project | ?fields=id          |           ✅15 |             ✅15 |
-| GET /project | ?fields=name        |           ✅15 |             ✅15 |
-| GET /project | ?fields=__items__   |           ✅15 |          ✅7 🛑8 |
-| GET /project | ?fields=permissions |           ✅15 |             ✅15 |
+| Endpoint     | Payload             | Version 1.2.3 |  Version 1.2.4 |
+|:-------------|:--------------------|--------------:|---------------:|
+| GET /project | ?fields=__name__    |           ✅10 |        ✅2 🛑8 |
+| GET /project | ?fields=items       |           ✅20 |           ✅20 |
+| GET /project | ?fields=permissions |           ✅20 |           ✅20 |
 
 ---
 
-# Где есть _Service_, _API_, _Payload_, _Version_, ...
+# Где есть _группировка_ по
 
-| API          | Payload             | Version 1.2.3 |   Version 1.2.4 |
-|:-------------|:--------------------|--------------:|----------------:|
-| GET /project | ?fields=id          |           ✅15 |             ✅15 |
-| GET /project | ?fields=name        |           ✅15 |             ✅15 |
-| GET /project | ?fields=items       |           ✅15 |          ✅7 🛑8 |
-| GET /project | ?fields=permissions |           ✅15 |             ✅15 |
+* ## Service
+* ## Endpoint
+* ## Payload
+* ## Version
+* ## ...
+
+| Endpoint     | Payload             | Version 1.2.3 | Version 1.2.4 |
+|:-------------|:--------------------|--------------:|--------------:|
+| GET /project | ?fields=name        |           ✅10 |        ✅2 🛑8 |
+| GET /project | ?fields=items       |           ✅20 |           ✅20 |
+| GET /project | ?fields=permissions |           ✅20 |           ✅20 |
+
 
 # по __каждому результату__ теста
 
 ---
 
-## __[https://allurereport.org/docs/junit5/#organize-tests](https://allurereport.org/docs/junit5/#organize-tests)__
+### __[allurereport.org/docs/junit5/#organize-tests](https://allurereport.org/docs/junit5/#organize-tests)__
 
-![bg w:100% opacity:80%](img/allure.behavior-based-hierarchy.annotation.api.png)
+![bg w:100% opacity:100%](img/allure.behavior-based-hierarchy.annotation.api.png)
 
 ---
 
-## __[https://allurereport.org/docs/junit5/#organize-tests](https://allurereport.org/docs/junit5/#organize-tests)__
+### __[allurereport.org/docs/junit5/#organize-tests](https://allurereport.org/docs/junit5/#organize-tests)__
 
 # _Behavior_: Epic / Feature / Story
 
-![bg w:100% opacity:60%](img/allure.behavior-based-hierarchy.annotation.api.png)
+![bg w:100% opacity:90%](img/allure.behavior-based-hierarchy.annotation.api.png)
 
 ---
 
-## __[https://allurereport.org/docs/junit5/#organize-tests](https://allurereport.org/docs/junit5/#organize-tests)__
+### __[allurereport.org/docs/junit5/#organize-tests](https://allurereport.org/docs/junit5/#organize-tests)__
 
 # Behavior: Epic / Feature / Story
 
 # _Annotations_ API
 
-![bg w:100% opacity:40%](img/allure.behavior-based-hierarchy.annotation.api.png)
+![bg w:100% opacity:80%](img/allure.behavior-based-hierarchy.annotation.api.png)
 
 ---
 
-## __[https://allurereport.org/docs/junit5/#organize-tests](https://allurereport.org/docs/junit5/#organize-tests)__
+### __[allurereport.org/docs/junit5/#organize-tests](https://allurereport.org/docs/junit5/#organize-tests)__
 
 # Behavior: Epic / Feature / Story
 
@@ -409,12 +532,12 @@ unknown-size: true
 
 
 ```groovy
-    @Epic("Web interface")
-    @Feature("Essential features")
-    @Story("Authentication")
+@Epic("Web interface")
+@Feature("Essential features")
+@Story("Authentication")
 ```
 
-![bg w:100% opacity:20%](img/allure.behavior-based-hierarchy.annotation.api.png)
+![bg w:100% opacity:50%](img/allure.behavior-based-hierarchy.annotation.api.png)
 
 ---
 
@@ -424,22 +547,22 @@ unknown-size: true
 
 ---
 
-## __[https://allurereport.org/docs/junit5/#organize-tests](https://allurereport.org/docs/junit5/#organize-tests)__
+## __[allurereport.org/docs/junit5/#organize-tests](https://allurereport.org/docs/junit5/#organize-tests)__
 
-![bg w:100% opacity:80%](img/allure.behavior-based-hierarchy.runtime.api.png)
+![bg w:100% opacity:100%](img/allure.behavior-based-hierarchy.runtime.api.png)
 
 ---
 
-## __[https://allurereport.org/docs/junit5/#organize-tests](https://allurereport.org/docs/junit5/#organize-tests)__
+### __[allurereport.org/docs/junit5/#organize-tests](https://allurereport.org/docs/junit5/#organize-tests)__
 
 # _Behavior_: Epic / Feature / Story
 
 
-![bg w:100% opacity:60%](img/allure.behavior-based-hierarchy.runtime.api.png)
+![bg w:100% opacity:90%](img/allure.behavior-based-hierarchy.runtime.api.png)
 
 ---
 
-## __[https://allurereport.org/docs/junit5/#organize-tests](https://allurereport.org/docs/junit5/#organize-tests)__
+## __[allurereport.org/docs/junit5/#organize-tests](https://allurereport.org/docs/junit5/#organize-tests)__
 
 # Behavior: Epic / Feature / Story
 
@@ -449,16 +572,16 @@ unknown-size: true
 
 ---
 
-## __[https://allurereport.org/docs/junit5/#organize-tests](https://allurereport.org/docs/junit5/#organize-tests)__
+## __[allurereport.org/docs/junit5/#organize-tests](https://allurereport.org/docs/junit5/#organize-tests)__
 
 # Behavior: Epic / Feature / Story
 
 # Runtime API
 
 ```groovy
-        Allure.epic("Web interface");
-        Allure.feature("Essential features");
-        Allure.story("Authentication");
+Allure.epic("Web interface");
+Allure.feature("Essential features");
+Allure.story("Authentication");
 ```
 ![bg w:100% opacity:20%](img/allure.behavior-based-hierarchy.runtime.api.png)
 
@@ -469,7 +592,7 @@ unknown-size: true
 
 ---
 
-# __[https://allurereport.org/docs/gettingstarted-navigation/#behavior-based-hierarchy](https://allurereport.org/docs/gettingstarted-navigation/#behavior-based-hierarchy)__
+## __[allurereport.org/docs/gettingstarted-navigation](https://allurereport.org/docs/gettingstarted-navigation/#behavior-based-hierarchy)__
 
 ![bg w:100% opacity:50%](img/allure.behavior-based-hierarchy.png)
 
@@ -478,7 +601,7 @@ unknown-size: true
 
 # Поля по умолчанию
 
-### __[https://docs.qameta.io/allure-testops/briefly/test-cases/labels/](https://docs.qameta.io/allure-testops/briefly/test-cases/labels/#list-of-standard-labels-used-in-allure-framework)__
+### __[docs.qameta.io/allure-testops/briefly/test-cases/labels/](https://docs.qameta.io/allure-testops/briefly/test-cases/labels/#list-of-standard-labels-used-in-allure-framework)__
 
 * parentSuite, suite, subSuite
 
@@ -493,18 +616,18 @@ unknown-size: true
 
 # Поля по умолчанию
 
-### __[https://docs.qameta.io/allure-testops/briefly/test-cases/labels/](https://docs.qameta.io/allure-testops/briefly/test-cases/labels/#list-of-standard-labels-used-in-allure-framework)__
+### __[docs.qameta.io/allure-testops/briefly/test-cases/labels/](https://docs.qameta.io/allure-testops/briefly/test-cases/labels/#list-of-standard-labels-used-in-allure-framework)__
 
 - parentSuite, suite, subSuite
 
 - testClass, testMethod
-- epic, feature, story
+- _epic_, _feature_, _story_
 - owner, lead
 - thread
 - layer
 - host
 
-![bg w:100% opacity:20%](img/allure.testops.standart.fields.png)
+![bg w:100% opacity:60%](img/allure.testops.standart.fields.png)
 
 
 ---
@@ -514,10 +637,10 @@ unknown-size: true
 
 ---
 
-# Задать можно _service_ (сервис)
+# _service_ (сервис)
 
 ```groovy
-⭐️ Allure.label("service",  "API");
+⭐️ Allure.label("service",  "API");                   
 ```
 
 
@@ -526,17 +649,17 @@ unknown-size: true
 # _endpoint_ (метод сервиса)
 
 ```groovy
-   Allure.label("service",  "API");
+   Allure.label("service",  "API");                   
 ⭐️ Allure.label("endpoint", "GET /projects");
 ```
 
 
 ---
 
-# _payload_ (параметры метода сервиса)
+# _payload_ (параметры)
 
 ```groovy
-   Allure.label("service",  "API");
+   Allure.label("service",  "API");                   
    Allure.label("endpoint", "GET /projects");
 ⭐️ Allure.label("payload",  "fields=item");
 ```
@@ -547,7 +670,7 @@ unknown-size: true
 # _dataset_ (тестовые данные)
 
 ```groovy
-   Allure.label("service",  "API");
+   Allure.label("service",  "API");                   
    Allure.label("endpoint", "GET /projects");
    Allure.label("payload",  "fields=item");
 ⭐️ Allure.label("dataset",  "enterprise 10000 users");
@@ -559,7 +682,7 @@ unknown-size: true
 # _version_ (версию сервиса)
 
 ```groovy
-   Allure.label("service",  "API");
+   Allure.label("service",  "API");                   
    Allure.label("endpoint", "GET /projects");
    Allure.label("payload",  "fields=item");
    Allure.label("dataset",  "enterprise 10000 users");
@@ -569,10 +692,10 @@ unknown-size: true
 
 ---
 
-# _environment_ (тестируемое окружение)
+# _environment_ (стенд)
 
 ```groovy
-   Allure.label("service",  "API");
+   Allure.label("service",  "API");                   
    Allure.label("endpoint", "GET /projects");
    Allure.label("payload",  "fields=item");
    Allure.label("dataset",  "enterprise 10000 users");
@@ -583,10 +706,10 @@ unknown-size: true
 
 ---
 
-# _server-location_ (параметры окружения)
+# _server-location_ (размещение)
 
 ```groovy
-   Allure.label("service",  "API");
+   Allure.label("service",  "API");                   
    Allure.label("endpoint", "GET /projects");
    Allure.label("payload",  "fields=item");
    Allure.label("dataset",  "enterprise 10000 users");
@@ -600,7 +723,7 @@ unknown-size: true
 # _client-location_ (параметры клиента)
 
 ```groovy
-   Allure.label("service",  "API");
+   Allure.label("service",  "API");                   
    Allure.label("endpoint", "GET /projects");
    Allure.label("payload",  "fields=item");
    Allure.label("dataset",  "enterprise 10000 users");
@@ -629,59 +752,66 @@ unknown-size: true
 
 ---
 
-# Значения могут быть _константами_
+# В __Annotation__ API
 
-# в __Annotation__ API
+# значения всегда _задаются в коде_
+
 
 ```groovy
-   @Endpoint("GET /projects");
+@Endpoint("GET /projects");                  
 ```
 
 ---
 
-# Значения могут быть _константами_
-# в __Runtime__ API
+# В __Runtime__ API
+# значения могут быть _константами_
 
 ```groovy
-   Allure.label("endpoint", "GET /projects");
+Allure.label("version", "1.2.3");            
 ```
 
 ---
 
-# Значения могут быть _функциями_
-# в __Runtime__ API
+# В __Runtime__ API
+# значения могут быть константами
 
 ```groovy
-   Allure.label("version",  getServerVersion());
+Allure.label("version", "1.2.3");            
+```
+
+# и _функциями_ тоже
+
+```groovy
+Allure.label("version",  getServerVersion());
 ```
 
 
 ---
 
-# Как построить аналитический отчет?
+# Как _сгруппировать_ статусы?
 
 
-| API          | Payload             | Version 1.2.3 | Version _1.2.4_ |
-|:-------------|:--------------------|--------------:|----------------:|
-| GET /project | ?fields=id          |           ✅15 |             ✅15 |
-| GET /project | ?fields=name        |           ✅15 |             ✅15 |
-| GET /project | ?fields=__items__   |           ✅15 |          ✅7 🛑8 |
-| GET /project | ?fields=permissions |           ✅15 |             ✅15 |
+| Endpoint     | Payload             | Version 1.2.3 | Version 1.2.4 |
+|:-------------|:--------------------|--------------:|--------------:|
+| GET /project | ?fields=name        |           ✅10 |        ✅2 🛑8 |
+| GET /project | ?fields=items       |           ✅20 |           ✅20 |
+| GET /project | ?fields=permissions |           ✅20 |           ✅20 |
 
 
----
-
-# Как построить аналитический отчет?
-
-## __API__ Export Launch _POST /api/rs/export/testresult/csv_
 
 ---
 
-# Как построить аналитический отчет?
+# Как _сгруппировать_ статусы?
 
-## __API__ Export Launch _POST /api/rs/export/testresult/csv_
+### __API__ Export Launch _POST /api/rs/export/testresult/csv_
 
-![bg w:100% opacity:50%](img/allure.testops.export.csv.png)
+---
+
+# Как _сгруппировать_ статусы?
+
+### __API__ Export Launch _POST /api/rs/export/testresult/csv_
+
+![bg w:100% opacity:60%](img/allure.testops.export.csv.png)
 
 ---
 
@@ -694,116 +824,132 @@ unknown-size: true
 
 ---
 
-# Как построить аналитический отчет?
+# Как _сгруппировать_ статусы?
 
-## __API__ Export Launch _POST /api/rs/export/testresult/csv_
+### __API__ Export Launch _POST /api/rs/export/testresult/csv_
 
-![bg w:100% opacity:30%](img/allure.testops.export.csv.select.jpg)
-
----
-
-# Как построить аналитический отчет?
-
-## API Export Launch POST /api/rs/export/testresult/csv
-## _CSV_ загружается в __InfluxDB__ / VictoriaMetrics / ...
+![bg w:100% opacity:60%](img/allure.testops.export.csv.select.jpg)
 
 ---
 
-# Как построить аналитический отчет?
+# Как _сгруппировать_ статусы?
 
-## API Export Launch POST /api/rs/export/testresult/csv
-## CSV загружается в InfluxDB / VictoriaMetrics / ...
-## __Grafana__ строит _аналитический_ отчет
-
----
-
-# Как построить аналитический отчет?
-
-## API Export Launch POST /api/rs/export/testresult/csv
-## CSV загружается в InfluxDB / VictoriaMetrics / ...
-## Grafana строит аналитический отчет
-## __Grafana__ показывает _детали_
+### API Export Launch POST /api/rs/export/testresult/csv
+### _CSV_ загружается в __InfluxDB__ / VictoriaMetrics / ...
 
 ---
 
-# Как построить аналитический отчет?
+# Как _сгруппировать_ статусы?
 
-## __API__ Export Launch _POST /api/rs/export/testresult/csv_
-## _CSV_ загружается в __InfluxDB__ / VictoriaMetrics / ...
-## __Grafana__ строит _аналитический_ отчет
-## __Grafana__ показывает _детали_
-
+### API Export Launch POST /api/rs/export/testresult/csv
+### CSV загружается в InfluxDB / VictoriaMetrics / ...
+### __Grafana__ строит _аналитический_ отчет
 
 ---
 
-# Анализ обычного отчета: _от 2-х часов_
+# Как _сгруппировать_ статусы?
+
+### API Export Launch POST /api/rs/export/testresult/csv
+### CSV загружается в InfluxDB / VictoriaMetrics / ...
+### Grafana строит аналитический отчет
+### __Grafana__ показывает _детали_
+
+---
+
+# Как _сгруппировать_ статусы?
+
+### __API__ Export Launch _POST /api/rs/export/testresult/csv_
+### _CSV_ загружается в __InfluxDB__ / VictoriaMetrics / ...
+### __Grafana__ строит _аналитический_ отчет
+### __Grafana__ показывает _детали_
 
 
 ---
 
-# Анализ обычного отчета: _от 2-х часов_
-
-# Анализ аналитики: _от 10-минут_
+# Анализ обычного отчета: _2+ часа_
 
 
 ---
 
-# Анализ обычного отчета: от 2-х часов
+# Анализ обычного отчета: 2+ часа
+
+# Анализ __аналитики__: _от 10-минут_
+
+
+---
+
+# Анализ обычного отчета: 2+ часа
 
 # Анализ аналитики: от 10-минут
 
-# Аналитика __выгодна__ уже с _12-го теста_
+# __Выгодно__ с _12-го теста_
 
 ---
 
 <!-- _class: main -->
 
-# _Allure TestOps_ и _Grafana_ дают читателю __скорость__ анализа
+# _Таблицы_ в __Grafana__ дают читателю __легкость__ анализа
 
 ---
 
-# А также ...
+# А также в __Allure TestOps__ легко
 
 ---
 
-# А также ...
+# А также в Allure TestOps легко
 
-# легко привязать _дефект_ или _задачу_ к результату теста производительности
+# создать __дефект__ по _Fail_-тесту
 
-
----
-
-# А также ...
-
-# легко привязать _дефект_ или _задачу_ к результату теста производительности
 
 ---
 
-# А также ...
+# А также в Allure TestOps легко
 
-# легко привязать _дефект_ или _задачу_ к результату теста производительности
+# создать дефект по Fail-тесту
 
-# и сделать __mute__ такому тесту
+# и  за-__Mute__-ить (_игнорировать_) сбой
 
 ---
 
-<!-- _class: main -->
+# А также в __Allure TestOps__ легко
 
-# Читатели _не игнорируют_ тесты производительности
+# создать __дефект__ по _Fail_-тесту
+
+# и  за-__Mute__-ить (_игнорировать_) сбой
 
 ---
 
 <!-- _class: main -->
 
-# Читатели _~~не~~_ __игнорируют__ тесты производительности __более осознанно__, используя беклог задач
+# Читатели 
+# _не игнорируют_ 
+# тесты по нагрузке
 
+---
+
+<!-- _class: main -->
+
+# Читатели
+# __правильно__ _игнорируют_
+# тесты по нагрузке
+
+
+---
+
+<!-- _class: main -->
+
+# Читатели
+# __правильно__ (Issue)
+# _игнорируют_ (Mute)
 
 
 ---
 
 <!-- _class: lead -->
 
-# Allure TestOps дает  _привычный_ __интерфейс__  работы с тестами и __API__ для формирования _аналитики_
+# Читателям 
+# _нравится_
+# простота
 
 
 ---
@@ -814,7 +960,12 @@ unknown-size: true
 
 ---
 
-# Есть _интеграция_ между __Allure__ и __JUnit__
+# _Allure_ интегрирован с __JUnit__ 5
+
+* работает хорошо
+
+* документация
+* примеры
 
 ---
 
@@ -823,30 +974,42 @@ unknown-size: true
 ---
 
 # В JUnit понятная структура проекта
-### __@BeforeAll__ для подачи нагрузки и _получения метрик_
-- Запуск k6/gatling/jmeter/...
-- Ожидание метрик от инструмента нагрузки
+### __@BeforeAll__ для подачи _нагрузки_
+
+* Запуск инструмента (_k6_/gatling/jmeter/...)
+
+* Ожидание метрик  (_summary.json_)
 
 ---
 
 # В JUnit понятная структура проекта
-### @BeforeAll для подачи нагрузки и получения метрик
-- Запуск k6/gatling/jmeter/...
-- Ожидание метрик от инструмента нагрузки
-### __@Test__, __@ParameterizedTest__, __@RepeatedTest__ для _проверок_
-- Проверка успешности теста и кодов ответов
-- Проверка длительности ответов
+### @BeforeAll для подачи нагрузки
+
+- Запуск инструмента (k6/gatling/jmeter/...)
+
+- Ожидание метрик  (summary.json)
+
+### __@Test__ для _проверок_
+
+* Проверка метрик (_summary.json_)
+
+* Добавление деталей (ссылки на _Grafana_)
 
 
 ---
 
 # В __JUnit__ понятная _структура_ проекта
-### __@BeforeAll__ для подачи нагрузки и _получения метрик_
-- Запуск k6/gatling/jmeter/...
-- Ожидание метрик от инструмента нагрузки
-### __@Test__, __@ParameterizedTest__, __@RepeatedTest__ для _проверок_
-- Проверка успешности теста и кодов ответов
-- Проверка длительности ответов
+### __@BeforeAll__
+
+- Запуск инструмента
+
+- Ожидание метрик
+
+### __@Test__
+
+- Проверка метрик
+
+- Добавление деталей
 
 ---
 
@@ -856,7 +1019,7 @@ unknown-size: true
 
 # __JUnit__ написан на _Java_
 
-_Популярные_ инструменты нагрузки запускаются из JVM
+_Некоторые_ инструменты запустить __легко__
 * __JMeter-Java-DSL__
 
 * __Gatling__
@@ -866,15 +1029,17 @@ _Популярные_ инструменты нагрузки запускаю�
 
 # __JUnit__ написан на _Java_
 
-_Любые_ другие инструменты нагрузки тоже запустятся
+Некоторые инструменты запустить легко
+* JMeter-Java-DSL
 
-* В _Java_ есть __[https://java.testcontainers.org/](https://java.testcontainers.org/)__
+* Gatling
 
-* Через __TestContainers__ можно запустить _Docker_-контейнеры
-* Внутри _Docker_ можно запустить 
-  * и __Taurus__ (Python)
-  * и __k6__ (Go)
-  * и _любой_ другой инструмент подачи нагрузки
+_Любые_ инструменты запустить __возможно__
+
+* В _Java_ есть __[java.testcontainers.org](https://java.testcontainers.org/)__
+
+* Через __Test Containers__ можно запустить _Docker_-контейнеры
+* Внутри _Docker_ можно запустить: __k6__, Taurus, ...
 
 ---
 
@@ -892,14 +1057,18 @@ _Любые_ другие инструменты нагрузки тоже за�
 
 <!-- _class: main -->
 
-# __JUnit__ интегрирован в _IDE_
+# __JUnit__ 
+# интегрирован в 
+# среды разработки _IDE_
 
 ---
 
 
 <!-- _class: main -->
 
-# __JUnit__ интегрирован в _CI_
+# __JUnit__ 
+# интегрирован в 
+# системы сборки _CI_
 
 ---
 
@@ -935,59 +1104,59 @@ _Любые_ другие инструменты нагрузки тоже за�
 
 ---
 
-# __Фреймворк__ задает структуру проекта
+# __Фреймворк__ задает структуру
 
 ---
 
-# __JUnit__ задает структуру проекта
+# __JUnit__ задает структуру
 
 ---
 
-# JUnit задает структуру проекта
+# JUnit задает структуру
 
-# _Статистика_ проверяется __Assertion__-ами
+# _Статистика_ тестируется
 
 ---
 
-# JUnit задает структуру проекта
+# JUnit задает структуру
 
 # k6 _summary.json_ тестируется
 
 ---
 
-# JUnit задает структуру проекта
+# JUnit задает структуру
 
 # k6 summary.json тестируется
 
-# __Скрипт__ шлет _результаты_ в __хранилище__
+# Шлем _результаты_ в __хранилище__
 
 ---
 
-# JUnit задает структуру проекта
+# JUnit задает структуру
 
 # k6 summary.json тестируется
 
-# __Скрипт__ шлет _результаты_ в __InfluxDB__
+# Шлем _CSV_ в __InfluxDB__
 
 ---
 
-# JUnit задает структуру проекта
+# JUnit задает структуру
 
 # k6 summary.json тестируется
 
-# Скрипт шлет результаты в InfluxDB
+# Шлем CSV в InfluxDB
 
-# __Dashboard__-ы Grafana строят _отчет_
+# __Grafana__ строит _отчет_
 
 ---
 
-# __JUnit__ задает структуру проекта
+# __JUnit__ задает структуру
 
 # k6 _summary.json_ тестируется
 
-# __Скрипт__ шлет _результаты_ в __InfluxDB__
+# Шлем _CSV_ в __InfluxDB__
 
-# __Dashboard__-ы Grafana строят _отчет_
+# __Grafana__ строит _отчет_
 
 ---
 
@@ -999,49 +1168,32 @@ _Любые_ другие инструменты нагрузки тоже за�
 
 <!-- _class: main -->
 
-# Много маленьких тестов __увеличивают__ тестовое _покрытие_
+# Много тестов 
+# __увеличивают__ 
+# тестовое покрытие
 
 ---
 
 <!-- _class: main -->
 
-# Много маленьких тестов __стандартизируют__ подачу нагрузки
+# Много тестов 
+# __стандартизируют__ 
+# подачу нагрузки
 
 ---
 
 <!-- _class: main -->
 
-# Много маленьких тестов __стандартизируют__ подачу нагрузки, можно _генерировать_ тесты
-
+# Шаблонные тесты
+# __генерируются__
+# в _2024_-м году
 ---
 
 <!-- _class: main -->
 
-# Можно передавать _параметры_ с payload, dataset, environment в шаблонный тест
-
----
-
-<!-- _class: main -->
-
-# Можно передавать _параметры_ с __payload__, __dataset__, __environment__ в шаблонный тест
-
----
-
-<!-- _class: main -->
-
-# Можно передавать _параметры_ с __payload__, __dataset__, __environment__ в _шаблонный_ тест
-
----
-
-<!-- _class: main -->
-
-# __AI__ _сгенерирует_ код из комбинации параметров и шаблона
-
----
-
-<!-- _class: main -->
-
-# AI _сгенерирует_ код из комбинации параметров и шаблона
+# __AI__ 
+# легко _генерирует_ код 
+# из списка параметров
 
 ---
 
@@ -1051,31 +1203,18 @@ _Любые_ другие инструменты нагрузки тоже за�
 
 <!-- _class: lead -->
 
-# 7️⃣ Какие есть __примеры__?
-
-
----
-
-<!-- _class: main -->
-
-# Demo
-
----
-
-<!-- _class: main -->
-
-# Сотня простых тестов 
+# __Сотня__ простых тестов 
 # _долго_ выполняется, 
-# да _быстро_ анализируется
+# да _быстро_ понимается
 
 ---
 
-# Понравилось? _=>_
+## Понравилось? ✅OK  🛑Fail
 ### [@qa_load](https://t.me/qa_load)
 ### [@smirnovqa](https://t.me/smirnovqa)
 ### [github.com/polarnik/k6-junit-integration](https://github.com/polarnik/k6-junit-integration)
 ### [polarnik.github.io/k6-junit-integration/codetalks](https://polarnik.github.io/k6-junit-integration/codetalks/)
-![bg w:90% right](img/qr.png)
+![bg w:90% right:35%](img/qr.png)
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
