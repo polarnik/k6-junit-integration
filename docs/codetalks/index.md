@@ -625,7 +625,12 @@ Allure.story("Authentication");
 - layer
 - host
 
-![bg w:100% opacity:60%](img/allure.testops.standart.fields.png)
+![bg w:100% opacity:30%](img/allure.testops.standart.fields.png)
+
+
+---
+
+![bg w:100% opacity:90%](img/allure.testops.standart.fields.png)
 
 
 ---
